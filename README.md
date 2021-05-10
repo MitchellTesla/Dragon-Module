@@ -191,7 +191,7 @@ Years of the Dragon include 1916, 1928, 1940, 1952, 1964, 1976, 1988, 2000, 2012
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright [yyyy] [name of copyright owner]
+   Copyright [2021] [Justin Mitchell]
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
