@@ -16,7 +16,8 @@ The core of Dragonfly is based on a flexible object model for handling speech el
 # Support for multiple speech recognition engines  
 Dragonfly's modular nature lets it use different speech recognition engines at the back end, while still providing a single front end interface to its users. This means that a program that uses Dragonfly can be run on any of the supported back end engines without any modification. Currently Dragonfly supports Dragon NaturallySpeaking and Windows Speech Recognition (included with Windows Vista).
 
-# Built-in action framework - Dragonfly contains its own powerful framework for defining and executing actions. It includes actions for text input and key-stroke simulation.
+# Built-in action framework 
+Dragonfly contains its own powerful framework for defining and executing actions. It includes actions for text input and key-stroke simulation.
 
 # Installation and Use
 For detailed instructions on how to install and use Dragonfly, please refer to the library's documentation.
