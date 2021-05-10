@@ -1,0 +1,28 @@
+#!/bin/bash
+OS=${ANDROID_PROVISION_OS_PARTITIONS:-${ANDROID_PRODUCT_OUT}}
+VENDOR=${ANDROID_PROVISION_VENDOR_PARTITIONS:-${ANDROID_BUILD_TOP}/vendor/bsp/qcom/device/dragonboard/qcom_410c_non-hlos_binaries_A8016BAAAAGLYD2131.1/}
+fastboot \
+  flash partition ${VENDOR}/partitions/partition-tables.bin \
+  flash modem ${VENDOR}/vendor_partitions/modem.bin \
+  flash fsc ${VENDOR}/vendor_partitions/fsc.bin \
+  flash sbl1 ${VENDOR}/vendor_partitions/sbl1.bin \
+  flash sbl1bak ${VENDOR}/vendor_partitions/sbl1.bin \
+  flash rpm ${VENDOR}/vendor_partitions/rpm.bin \
+  flash rpmbak ${VENDOR}/vendor_partitions/rpm.bin \
+  flash tz ${VENDOR}/vendor_partitions/tz.bin \
+  flash tzbak ${VENDOR}/vendor_partitions/tz.bin \
+  flash hyp ${VENDOR}/vendor_partitions/hyp.bin \
+  flash hypbak ${VENDOR}/vendor_partitions/hyp.bin \
+  flash modemst1 ${VENDOR}/vendor_partitions/modemst1.bin \
+  flash modemst2 ${VENDOR}/vendor_partitions/modemst2.bin \
+  flash DDR ${VENDOR}/vendor_partitions/DDR.bin \
+  flash fsg ${VENDOR}/vendor_partitions/fsg.bin \
+  flash sec ${VENDOR}/vendor_partitions/sec.bin \
+  flash aboot ${VENDOR}/vendor_partitions/aboot.bin \
+  flash abootbak ${VENDOR}/vendor_partitions/aboot.bin \
+  flash misc ${VENDOR}/partitions/misc.bin \
+  flash boot_a ${OS}/boot.img \
+  flash system_a ${OS}/system.img \
+  flash boot_b ${OS}/boot.img \
+  flash system_b ${OS}/system.img \
+  flash userdata ${OS}/userdata.img "$@"
